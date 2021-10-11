@@ -4,7 +4,7 @@ import { ICommand } from 'wokcommands';
 export default {
   category: 'FACEIT',
   description: 'The bot can now express himself',
-  aliases: ['toxic'],
+  aliases: [],
   permissions: ['MANAGE_MESSAGES'],
   guildOnly: true,
   minArgs: 1,
