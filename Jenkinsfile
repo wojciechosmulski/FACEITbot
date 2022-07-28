@@ -15,7 +15,7 @@ pipeline {
         stage('Build') { 
             steps { 
                 script{
-                 app = docker.build("Osmulak122/FACEITbot")
+                 app = docker.build("osmulak122/faceitbot")
                 }
             }
         }
