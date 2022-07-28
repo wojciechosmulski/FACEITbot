@@ -1,10 +1,23 @@
-node {
-     def app 
-     stage('clone repository') {
-      checkout scm  
+pipeline {
+    agent any
+    options {
+        skipStagesAfterUnstable()
     }
-     stage('Build docker Image'){
-      app = docker.build("Osmulak122/FACEITbot")
-    }
+    stages {
+         stage('Clone repository') { 
+            steps { 
+                script{
+                checkout scm
+                }
+            }
+        }
 
+        stage('Build') { 
+            steps { 
+                script{
+                 app = docker.build("Osmulak122/FACEITbot")
+                }
+            }
+        }
+    }
 }
