@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  faceit-bot:
+    image: faceit-bot:latest
+    secrets:
+      - DISCORD_TOKEN
+secrets:
+  DISCORD_TOKEN:
+    external: true
